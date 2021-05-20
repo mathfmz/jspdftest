@@ -8590,7 +8590,7 @@ var getDefaultSetting = displayDOMUtils.getDefaultSetting;
 
 var DEFAULT_RANGE_CHUNK_SIZE = 65536; // 2^16 = 65536
 
-var isWorkerDisabled = false;
+var isWorkerDisabled = true;
 var workerSrc;
 var isPostMessageTransfersDisabled = false;
 
