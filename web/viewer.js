@@ -7432,6 +7432,8 @@ var PDFViewerApplication = {
   },
 
   download: function pdfViewDownload() {
+    console.log("download");
+    
     function downloadByUrl() {
       downloadManager.downloadUrl(url, filename);
     }
@@ -8077,10 +8079,15 @@ function webViewerInitialized() {
       PDFViewerApplication.page++;
     });
 
-  appConfig.toolbar.zoomIn.addEventListener('click',
-    function() {
-      PDFViewerApplication.zoomIn();
-    });
+    appConfig.toolbar.zoomIn.addEventListener('click',
+      function() {
+        PDFViewerApplication.zoomIn();
+      });
+
+    appConfig.toolbar.download.addEventListener('click',
+      function() {
+        PDFViewerApplication.download();
+      });
 
   appConfig.toolbar.zoomOut.addEventListener('click',
     function() {
