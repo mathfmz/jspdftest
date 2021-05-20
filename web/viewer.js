@@ -7170,6 +7170,7 @@ var PDFViewerApplication = {
   },
 
   zoomIn: function pdfViewZoomIn(ticks) {
+    console.log('zoom');
     var newScale = this.pdfViewer.currentScale;
     do {
       newScale = (newScale * DEFAULT_SCALE_DELTA).toFixed(2);
